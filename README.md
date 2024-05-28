@@ -30,18 +30,23 @@ cd votre-repo
 npm install
 # ou
 yarn install
+```
 
 ## Usage
 
 1. Créez un fichier .env à la racine de votre projet et ajoutez votre clé API ipbase-js :
 
+```bash
 REACT_APP_IPBASE_API_KEY=your_api_key_here
+```
 
 2. Démarrez l'application :
 
+```bash
 npm start
 # ou
 yarn start
+```
 
 3. Ouvrez votre navigateur et allez à l'adresse http://localhost:3000 pour voir l'application en action.
 
