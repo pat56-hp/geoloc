@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Application de Localisation par Adresse IP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Cette application ReactJS permet d'obtenir la localisation d'un utilisateur à partir de son adresse IP en utilisant l'API ipbase-js.
 
-## Available Scripts
+## Table des matières
 
-In the project directory, you can run:
+- [Prérequis](#prérequis)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Fonctionnalités](#fonctionnalités)
+- [Technologies Utilisées](#technologies-utilisées)
 
-### `npm start`
+## Prérequis
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Avant de commencer, assurez-vous d'avoir les éléments suivants installés sur votre machine :
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Node.js](https://nodejs.org/) (version 12 ou supérieure)
+- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clonez le dépôt :
 
-### `npm run build`
+```bash
+git clone https://github.com/votre-utilisateur/votre-repo.git
+cd votre-repo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Installez les dépendances :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm install
+# ou
+yarn install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+1. Créez un fichier .env à la racine de votre projet et ajoutez votre clé API ipbase-js :
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+REACT_APP_IPBASE_API_KEY=your_api_key_here
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Démarrez l'application :
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+npm start
+# ou
+yarn start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Ouvrez votre navigateur et allez à l'adresse http://localhost:3000 pour voir l'application en action.
 
-## Learn More
+## Fonctionnalités
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Récupération de la localisation basée sur l'adresse IP
+* Affichage des informations de localisation (pays, région, ville, etc.)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technologies Utilisées
 
-### Code Splitting
+* [React](https://www.reactjs.org)
+* [ipbase-js](https://www.ipbase.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
