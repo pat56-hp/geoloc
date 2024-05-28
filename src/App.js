@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import AppBar from './components/AppBar';
+import Hero from './components/Hero';
+import getLPTheme from './getLPTheme';
+import { ToastContainer } from 'react-toastify';
 
-function App() {
+export default function App() {
+  const [mode, setMode] = React.useState('light');
+  const [showCustomTheme] = React.useState(true);
+  const LPtheme = createTheme(getLPTheme(mode));
+  const defaultTheme = createTheme({ palette: { mode } });
+
+  const toggleColorMode = () => {
+    setMode((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  };
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={showCustomTheme ? LPtheme : defaultTheme}>
+      <CssBaseline />
+      
+      <AppBar mode={mode} toggleColorMode={toggleColorMode} />
+      <Hero />
+    </ThemeProvider>
   );
 }
-
-export default App;
